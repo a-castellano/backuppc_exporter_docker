@@ -12,7 +12,7 @@ build:
   artifacts:
     name: "build"
     paths:
-      - build
+      - backuppc_exporter/build
     expire_in: 10 minutes
 
 
