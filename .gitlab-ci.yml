@@ -1,5 +1,6 @@
 stages:
     - build
+    - image
 
 build:
   stage: build
@@ -15,4 +16,13 @@ build:
       - backuppc_exporter/build
     expire_in: 10 minutes
 
-
+build_image:
+  stage: image
+  image: registry.windmaker.net:5005/a-castellano/limani/base_docker
+  script:
+    - export IMAGE_NAME=backuppc_exporter
+    - export IS_BASE_IMAGE=1
+    - ls -l
+    - docker-build
+  dependencies:
+    - build
