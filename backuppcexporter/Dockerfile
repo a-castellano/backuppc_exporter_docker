@@ -3,10 +3,7 @@ MAINTAINER Álvaro Castellano Vela <alvaro.castellano.vela@gmail.com>
 
 COPY backuppc_exporter /usr/local/bin/backuppc_exporter
 
-RUN useradd -ms /bin/bash backuppc
 RUN chmod 755 /usr/local/bin/backuppc_exporter
-
-USER backuppc
 
 EXPOSE 8080
 
