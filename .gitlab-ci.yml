@@ -22,7 +22,7 @@ build_image:
   script:
     - export IMAGE_NAME=backuppcexporter
     - export IS_BASE_IMAGE=1
-    - ls -lahrRt backuppc_exporter
+    - mv backuppc_exporter/backuppc_exporter backuppcexporter/
     - docker-build
   dependencies:
     - build
