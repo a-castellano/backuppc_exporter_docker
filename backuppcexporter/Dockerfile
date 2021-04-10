@@ -1,0 +1,15 @@
+FROM ubuntu:focal
+MAINTAINER Álvaro Castellano Vela <alvaro.castellano.vela@gmail.com>
+
+COPY ../backuppc_exporter/backuppc_exporter /usr/local/bin/backuppc_exporter
+
+RUN useradd -ms /bin/bash backuppc
+RUN chmod 755 /usr/local/bin/backuppc_exporter
+
+USER www-data
+
+EXPOSE 8080
+
+STOPSIGNAL SIGTERM
+
+CMD ["backuppc_exporter"]
