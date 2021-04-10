@@ -12,4 +12,4 @@ EXPOSE 8080
 
 STOPSIGNAL SIGTERM
 
-CMD ["/usr/local/bin/backuppc_exporte"]
+CMD ["/usr/local/bin/backuppc_exporter"]
