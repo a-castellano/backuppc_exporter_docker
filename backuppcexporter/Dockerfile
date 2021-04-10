@@ -6,7 +6,7 @@ COPY backuppc_exporter /usr/local/bin/backuppc_exporter
 RUN useradd -ms /bin/bash backuppc
 RUN chmod 755 /usr/local/bin/backuppc_exporter
 
-USER www-data
+USER backuppc
 
 EXPOSE 8080
 
